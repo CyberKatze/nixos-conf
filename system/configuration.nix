@@ -58,7 +58,7 @@
   users.users.${user} = {
     isNormalUser = true;
     description = user;
-    extraGroups = [ "networkmanager" "wheel" "docker" "video" "kvm" "audio" "fuse"];
+    extraGroups = [ "networkmanager" "wheel" "docker" "video" "kvm" "audio" "fuse" "adbusers"];
   };
 
   users.defaultUserShell = pkgs.fish;
