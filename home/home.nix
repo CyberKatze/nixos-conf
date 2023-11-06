@@ -28,6 +28,10 @@
       #mattermost-desktop
       firefox-wayland
       thunderbird
+      spotify
+      anki-bin
+      calibre
+      xournalpp
 
       # utils
       wireguard-tools
@@ -36,7 +40,7 @@
       httpie 
       lazygit 
       lazydocker
-      dunst
+      mako
       xflux
       pavucontrol
       android-tools
@@ -45,6 +49,9 @@
       scrcpy
       emote
       presenterm
+      mpv
+      imv
+      watson
 
       # dev
       glab
@@ -65,6 +72,9 @@
       stack
       cabal-install
       agda
+      chezmoi
+      fd
+      tmux
 
      ];
 
@@ -97,6 +107,7 @@
     name = "Bibata-Modern-Ice";
     size = 22;
   };
+
 
   home.pointerCursor.gtk.enable = true;
   gtk = {
