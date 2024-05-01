@@ -17,6 +17,7 @@
     fzf
     fishPlugins.grc
     grc
+    virt-manager
   ];
 
   programs.fish.enable = true;

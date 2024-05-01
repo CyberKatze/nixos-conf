@@ -54,11 +54,14 @@
 
   # Enable docker
   virtualisation.docker.enable = true;
+
+  # Enable virtd
+  virtualisation.libvirtd.enable = true;
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user} = {
     isNormalUser = true;
     description = user;
-    extraGroups = [ "networkmanager" "wheel" "docker" "video" "kvm" "audio" "fuse" "adbusers"];
+    extraGroups = [ "networkmanager" "wheel" "docker" "video" "kvm" "audio" "fuse" "adbusers" "libvirtd"];
   };
 
   users.defaultUserShell = pkgs.fish;

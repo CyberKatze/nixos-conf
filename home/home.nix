@@ -34,6 +34,7 @@
       xournalpp
 
       # utils
+      obs-studio-plugins.obs-backgroundremoval
       wireguard-tools
       wlr-randr
       atool 
@@ -75,6 +76,7 @@
       chezmoi
       fd
       tmux
+      elixir
 
      ];
 

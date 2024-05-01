@@ -16,6 +16,7 @@
   security.pam.services.swaylock = { };
 
   xdg.portal = {
+    config.common.default = "*";
     enable = true;
     extraPortals= [pkgs.xdg-desktop-portal-gtk];
     wlr.enable = true;
