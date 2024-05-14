@@ -23,4 +23,9 @@
     systemd.enable = true;
     extraConfig = builtins.readFile ./hyprland.conf;
   };
+
+  home.file.".scripts" = {
+    source = ./scripts;
+    recursive = true;
+  };
 }

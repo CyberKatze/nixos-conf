@@ -10,7 +10,7 @@
     };
 
     hyprland = {
-      url = "github:hyprwm/Hyprland";
+      url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     };
 
     hyprpicker.url = "github:hyprwm/hyprpicker";

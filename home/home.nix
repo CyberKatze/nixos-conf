@@ -46,6 +46,7 @@
       pavucontrol
       android-tools
       xfce.thunar
+      xfce.tumbler
       jmtpfs
       scrcpy
       emote
@@ -53,6 +54,11 @@
       mpv
       imv
       watson
+      networkmanagerapplet
+      swww
+      brightnessctl
+      libnotify
+
 
       # dev
       glab
@@ -66,15 +72,13 @@
       nodePackages.pnpm
       nodePackages.typescript
       cargo
+      ghc
+      cabal-install
       ripgrep
       python3Full 
       jq
-      ghc
-      stack
-      cabal-install
       agda
-      chezmoi
-      fd
+      chezmoi fd
       tmux
       elixir
 
@@ -82,23 +86,40 @@
 
   programs.home-manager.enable = true;
 
-  programs.starship = {
-    enable = true;
-  };
-  programs.gh = {
-    enable = true;
-  };
-  programs.fish = {
-    enable = true;
-    interactiveShellInit = ''
-      set fish_greeting # Disable greeting
-    '';
-    plugins = [
-      # Enable a plugin (here grc for colorized command output)
-      { name = "grc"; src = pkgs.fishPlugins.grc.src; }
-    ];
-  };
+  home.sessionPath = [
+    "/home/${user}/.local/bin"
+    "/home/${user}/.cargo/bin"
+    "/home/${user}/.go/bin"
+  ];
 
+  # make all programs below one programs = {
+
+
+  programs = {
+
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
+
+    starship = {
+      enable = true;
+    };
+    gh = {
+      enable = true;
+    };
+    fish = {
+      enable = true;
+      interactiveShellInit = ''
+        set fish_greeting # Disable greeting
+      '';
+      plugins = [
+        # Enable a plugin (here grc for colorized command output)
+        { name = "grc"; src = pkgs.fishPlugins.grc.src; }
+      ];
+    };
+
+  };
   # GTK
 
   home.sessionVariables = {

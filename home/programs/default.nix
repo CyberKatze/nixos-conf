@@ -1,6 +1,6 @@
 {
   imports = [
-    ./dunst
+    ./mako
     ./hypr
     ./waybar
     ./wofi
